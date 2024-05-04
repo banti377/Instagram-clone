@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./Login.css"
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -51,6 +51,7 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
+                <Link to="/Signup">Create Account</Link>
                 <button type="submit">Login</button>
             </form>
         </div>
