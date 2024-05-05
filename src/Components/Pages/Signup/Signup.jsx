@@ -7,18 +7,21 @@ import "./Signup.css";
 function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
-  //   const [username, setUsername] = useState();
+    // const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+  
   const registerHandler = async (e) => {
     e.preventDefault();
     const data = { email, password };
     try {
-      await axios.post("http://localhost:8000/user/signup", data);
+      await axios.post("http://localhost:8000/user/signUp", data);
       navigate("/");
     } catch (err) {
       console.error("Login error:", err);
     }
   };
+
+
   return (
     <div className="SignupContainer">
       <div className="signupWrapper">
