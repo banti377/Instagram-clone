@@ -34,6 +34,7 @@ function Login() {
       navigate("/home");
     } catch (err) {
       console.error("Login error:", err);
+      alert(err.response.data.message); // Display error message to user
     }
   };
 
