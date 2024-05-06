@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 import { Card } from "flowbite-react";
 import { FaCircle, FaRegHeart } from "react-icons/fa6";
 import { IoIosMore } from "react-icons/io";
 import { FiMessageCircle, FiSend } from "react-icons/fi";
-import { BsCollectionFill } from "react-icons/bs";
+import { BsBookmark } from "react-icons/bs";
 import axios from "axios";
-import "./Home.css"
-
+import "./Home.css";
 
 export default function CardCom() {
   axios({
@@ -20,46 +19,101 @@ export default function CardCom() {
       console.log("Product Error=>", err);
     });
 
-
   return (
     <div className="card-container">
-      <Card className="max-w-lg">
-        <div className="flex justify-between items-center gap-1 ">
-          <span className="flex items-center gap-2">
-            <img
-              src="../../../../../public/post.jpg"
-              className="w-10 rounded-fullborder-solid border-2 border-indigo-600 rounded-full p-0.5 "
-            />
-            <span className="flex gap-2">
-              <h5 className="font-semibold">Noteworthy technology</h5>
-              <h6 className="text-gray-400 items-center flex">
-                <FaCircle className="" style={{ fontSize: "4px" }} /> 1d
-              </h6>
-            </span>
-          </span>
-
-          <span>
-            <IoIosMore />
-          </span>
+      <Card className="instagram-card">
+        <div className="instagram-header">
+          <img src="/post.jpg" alt="User" className="user-avatar" />
+          <h5 className="username">Username</h5>
+          <IoIosMore className="more-icon" />
         </div>
-        <img src="../../../../../public/post.jpg" />
-        <div className="flex justify-between">
-          <span className="flex text-2xl gap-3">
-            <FaRegHeart />
-            <FiMessageCircle />
-            <FiSend />
-          </span>
-          <span className="text-2xl font-bold">
-            <BsCollectionFill />
-          </span>
+        <img src="/post.jpg" alt="Post" className="post-image" />
+        <div className="instagram-footer">
+          <div className="icons">
+            <button className="icon-button">
+              <FaRegHeart className="icon" />
+            </button>
+            <button className="icon-button">
+              <FiMessageCircle className="icon" />
+            </button>
+            <button className="icon-button">
+              <FiSend className="icon" />
+            </button>
+          </div>
+          <button className="icon-button">
+            <BsBookmark className="icon" />
+          </button>
         </div>
-        <p className="font-medium">9 Likes</p>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          Here are  the biggest enterprise technology acquisitions of 2021... more
+        <p className="likes">9 Likes</p>
+        <p className="description">
+          Here are the biggest enterprise technology acquisitions of 2021...
+          more
         </p>
-        <p className="text-gray-400 text-xm">Add Comment...</p>
+        <p className="add-comment">Add Comment...</p>
       </Card>
-
     </div>
-  )
+  );
 }
+
+// import React from "react";
+// import { Card } from "flowbite-react";
+// import { FaCircle, FaRegHeart } from "react-icons/fa6";
+// import { IoIosMore } from "react-icons/io";
+// import { FiMessageCircle, FiSend } from "react-icons/fi";
+// import { BsCollectionFill } from "react-icons/bs";
+// import axios from "axios";
+// import "./Home.css";
+
+// export default function CardCom() {
+//   axios({
+//     method: "get",
+//     url: " http://localhost:8000/post/getAll",
+//   })
+//     .then((res) => {
+//       console.log("Product Res=>", res.data);
+//     })
+//     .catch((err) => {
+//       console.log("Product Error=>", err);
+//     });
+
+//   return (
+//     <div className="card-container">
+//       <Card>
+//         <div>
+//           <span >
+//             <img
+//               src="/post.jpg"
+//             />
+//             <span >
+//               <h5 >Noteworthy technology</h5>
+//               <h6 >
+//                 <FaCircle className="" style={{ fontSize: "4px" }} /> 1d
+//               </h6>
+//             </span>
+//           </span>
+
+//           <span>
+//             <IoIosMore />
+//           </span>
+//         </div>
+//         <img src="/post.jpg" />
+//         <div >
+//           <span >
+//             <FaRegHeart />
+//             <FiMessageCircle />
+//             <FiSend />
+//           </span>
+//           <span >
+//             <BsCollectionFill />
+//           </span>
+//         </div>
+//         <p>9 Likes</p>
+//         <p>
+//           Here are the biggest enterprise technology acquisitions of 2021...
+//           more
+//         </p>
+//         <p>Add Comment...</p>
+//       </Card>
+//     </div>
+//   );
+// }
