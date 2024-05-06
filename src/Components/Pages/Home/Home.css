@@ -84,7 +84,7 @@
 
 /*------------------------ Story component ------------------------*/
 .story-container {
-  width: 25%; /* Adjust width as needed */
+  width: 25%;
   padding: 20px;
 }
 
@@ -94,7 +94,7 @@
   overflow-x: auto;
   padding: 20px 0;
   gap: 15px;
-  margin: 0 243px; /* Center the menu */
+  margin: 0 243px;
 }
 
 .story-role-item {
@@ -105,8 +105,8 @@
 }
 
 .story-role-image {
-  width: 64px; /* Instagram story image size */
-  height: 64px; /* Instagram story image size */
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   border: 2px solid transparent;
   transition: border-color 0.3s;
@@ -115,13 +115,12 @@
 .story-role-username {
   font-size: 12px;
   margin-top: 5px;
-  text-align: center; /* Center username */
+  text-align: center;
 }
 
 .story-role-item.active .story-role-image {
-  border-color: #ed4956; /* Instagram's story border color */
+  border-color: #ed4956;
 }
-
 /*------------------------ Maininfo component ------------------------*/
 .maininfo-container {
   flex: 1;
@@ -153,7 +152,7 @@
   margin-bottom: 10px;
 }
 
-/* Instagram-like post card */
+/*------------------------ Instagram-like post card ------------------------*/
 .instagram-card {
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -200,18 +199,17 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .icon {
-  font-size: 20px; 
-  color: #262626; 
+  font-size: 20px;
+  color: #262626;
 }
 
 .icon:hover {
-  color:#ed4956;
+  color: #ed4956;
 }
-
 
 .save-post-icon {
   font-size: 20px;
