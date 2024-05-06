@@ -1,0 +1,99 @@
+/* Option component */
+.option-container {
+    background-color: #f0f4f7;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    border-right: 2px solid #4b5563;
+    width: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.option-header {
+    padding: 20px 35px;
+}
+
+.option-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.option-links,
+.option-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 35px;
+}
+
+.option-links span,
+.option-actions span {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.option-links span h5,
+.option-actions span h5 {
+    text-transform: capitalize;
+}
+
+/* Maininfo component */
+.maininfo-container {
+    display: flex;
+    gap: 30px;
+    margin-left: 25%;
+    /* Same as width of option container */
+    padding: 20px;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* CardCom component */
+.card-container {
+    max-width: 32rem;
+    /* 512px */
+}
+
+/* Requset component */
+.request-container {
+    margin-top: 50px;
+}
+
+.request-container div {
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.request-container img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #4b5563;
+    border-radius: 50%;
+}
+
+.request-container h5 {
+    font-weight: bold;
+}
+
+.request-container h5:last-child {
+    color: #a1a1aa;
+    font-size: 14px;
+}
+
+.request-container p {
+    color: #3b82f6;
+    font-weight: bold;
+    font-size: 14px;
+}

@@ -31,7 +31,7 @@ function Login() {
         password: password.current.value,
       });
       console.log("Login success:", response.data);
-      navigate("/profile");
+      navigate("/home");
     } catch (err) {
       console.error("Login error:", err);
     }
