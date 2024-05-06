@@ -17,7 +17,7 @@ function Signup() {
       await axios.post("http://localhost:8000/user/signUp", data);
       navigate("/");
     } catch (err) {
-      console.error("Login error:", err);
+      console.error("Signup error:", err);
     }
   };
 
