@@ -1,65 +1,82 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import Option from "../Home/Option";
+
 
 export default function Profile() {
   const userId = "123";
 
-  useEffect(() => {
-    axios({
-      method: "get",
-      url: "http://localhost:8000/followers/allfollowers/${userId}",
-    })
-      .then((res) => {
-        console.log("followers Res=>", res.data);
-      })
-      .catch((err) => {
-        console.log("followers Error=>", err);
-      });
-  }, [userId]);
+  // useEffect(() => {
+  //   axios({
+  //     method: "get",
+  //     url: "http://localhost:8000/followers/allfollowers/${userId}",
+  //   })
+  //     .then((res) => {
+  //       console.log("followers Res=>", res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log("followers Error=>", err);
+  //     });
+  // }, [userId]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Profile Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center">
-          <img
-            src="user.jpg"
-            alt="Profile"
-            className="w-20 h-20 rounded-full mr-4"
-          />
-          <div>
-            <h1 className="font-semibold text-xl">John Doe</h1>
-            <p className="text-gray-500">@johndoe</p>
-          </div>
-        </div>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
-          Edit Profile
-        </button>
+    <div class="profile">
+      <Option />
+      <div class="profile-header">
+    <img src="user.jpg" alt="Profile Picture" />
+    <div class="profile-info">
+      <div class="profile-actions">
+        <h1>Username</h1>
+        <button>Edit Profile</button>
+        <button>View Archive</button>
+        <button class="settings-button">&#9881;</button>
       </div>
-
-      {/* Profile Stats */}
-      <div className="flex mb-8">
-        <div className="w-1/3 text-center">
-          <h2 className="font-semibold text-lg">Posts</h2>
-          <p className="text-gray-500">10</p>
-        </div>
-        <div className="w-1/3 text-center">
-          <h2 className="font-semibold text-lg">Followers</h2>
-          <p className="text-gray-500">100</p>
-        </div>
-        <div className="w-1/3 text-center">
-          <h2 className="font-semibold text-lg">Following</h2>
-          <p className="text-gray-500">50</p>
-        </div>
+      <div class="follow-stats">
+        <span>Posts: 100</span>
+        <span>Followers: 500</span>
+        <span>Following: 200</span>
       </div>
-
-      {/* Gallery */}
-      <div className="grid grid-cols-3 gap-4">
-        <img src="post.jpg" alt="Post 1" className="rounded-lg" />
-        <img src="post.jpg" alt="Post 2" className="rounded-lg" />
-        <img src="post.jpg" alt="Post 3" className="rounded-lg" />
-        {/* Add more images here */}
+      <p class="bio">Bio</p>
+    </div>
+  </div>
+  <div class="tab-list">
+    <div class="tab"> 
+      <span class="icon">&#128247;</span> 
+      <span>Posts</span>
+    </div>
+    <div class="tab"> 
+      <span class="icon">&#128465;</span>
+      <span>Saved</span>
+    </div>
+    <div class="tab"> 
+      <span class="icon">&#64;</span>
+      <span>Tagged</span>
+    </div>
+  </div>
+      <div class="posts-grid">
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
+        <div class="post">
+          <img src="post.jpg" alt="Post Image" />
+        </div>
       </div>
     </div>
   );
 }
+

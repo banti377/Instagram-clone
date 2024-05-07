@@ -9,27 +9,22 @@ function Signup() {
   const [email, setEmail] = useState();
   // const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+  
   const registerHandler = async (e) => {
     e.preventDefault();
     try {
-        // Validate email and password
         if (!email || !password) {
             throw new Error("Email and password are required");
         }
         
-        // Send signup request
         const response = await axios.post("http://localhost:8000/user/signup", { email, password });
         console.log("Signup response:", response.data);
 
-        // Redirect user to homepage on successful signup
         navigate("/");
     } catch (error) {
         console.error("Error in registerHandler:", error);
-        // Display error message to user
-        alert(error.message);
     }
 };
-
 
 
   return (

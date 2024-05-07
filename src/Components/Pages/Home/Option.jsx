@@ -1,68 +1,105 @@
-import React from 'react'
-import { Compass, Heart, Home, MessageCircleCode, MonitorPlay, Search, SquarePlus, SquareUserRound } from 'lucide-react'
+import React, { useState } from "react";
+import {
+  Compass,
+  Heart,
+  Home,
+  MessageCircleCode,
+  MonitorPlay,
+  Search,
+  SquarePlus,
+  SquareUserRound,
+} from "lucide-react";
 import { FaThreads } from "react-icons/fa6";
 import { MdOutlineDensityMedium } from "react-icons/md";
-import "./Home.css"
+import "./Home.css";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Option() {
-    return (
-        <div className='option-container'>
-            <div className='option-header'>
-                <h3 className='text-2xl font-bold'>instagram</h3>
-            </div>
-            <div className='option-links'>
-                <span>
-                    <Home />
-                    <h5 className='capitalize '>home</h5>
-                </span>
+  const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
 
-                <span>
-                    <Search />
-                    <h5 className='capitalize'>search</h5>
-                </span>
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
-                <span>
-                    <Compass />
-                    <h5 className='capitalize'>explore</h5>
-                </span>
+  const logout = () => {
+    navigate("/");
+  };
 
-                <span>
-                    <MonitorPlay />
-                    <h5 className='capitalize'>reels</h5>
-                </span>
+  return (
+    <div className="option-container">
+      <div className="option-header">
+        <h3>instagram</h3>
+      </div>
+      <div className="option-links">
+        {/* ----- Home ----- */}
+        <Link to="/home">
+          <span>
+            <Home />
+            <h5 className="capitalize ">home</h5>
+          </span>
+        </Link>
 
-                <span>
-                    <MessageCircleCode />
-                    <h5 className='capitalize'>messages</h5>
-                </span>
+        {/* ----- Search ----- */}
+        <Link to="/search">
+          <span>
+            <Search />
+            <h5 className="capitalize">search</h5>
+          </span>
+        </Link>
 
-                <span>
-                    <Heart />
-                    <h5 className='capitalize'>notification</h5>
-                </span>
+        <span>
+          <Compass />
+          <h5 className="capitalize">explore</h5>
+        </span>
 
-                <span>
-                    <SquarePlus />
-                    <h5 className='capitalize'>create</h5>
-                </span>
+        <span>
+          <MonitorPlay />
+          <h5 className="capitalize">reels</h5>
+        </span>
 
-                <span>
-                    <SquareUserRound />
-                    <h5 className='capitalize'>profile</h5>
-                </span>
-            </div>
+        <span>
+          <MessageCircleCode />
+          <h5 className="capitalize">messages</h5>
+        </span>
 
-            <div className='option-actions'>
-                <span >
-                    <FaThreads />
-                    <h5 className='capitalize'>threads</h5>
-                </span>
+        <span>
+          <Heart />
+          <h5 className="capitalize">notification</h5>
+        </span>
 
-                <span >
-                    <MdOutlineDensityMedium />
-                    <h5 className='capitalize'>more</h5>
-                </span>
-            </div>
-        </div>
-    )
+        <span>
+          <SquarePlus />
+          <h5 className="capitalize">create</h5>
+        </span>
+
+        {/* ----- Profile ----- */}
+        <Link to="/profile">
+          <span>
+            <img src="user.jpg" alt="Profile" className="profile-image" />
+            <h5 className="capitalize">profile</h5>
+          </span>
+        </Link>
+      </div>
+
+      <div className="option-actions">
+        <span>
+          <FaThreads />
+          <h5 className="capitalize">threads</h5>
+        </span>
+
+        <span onClick={toggleMenu}>
+          <MdOutlineDensityMedium />
+          <h5 className="capitalize">more</h5>
+        </span>
+        {showMenu && (
+          <div className="popup-menu">
+            <span onClick={logout}>
+              <h5 className="capitalize">logout</h5>
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
