@@ -23,7 +23,7 @@ export default function CardCom() {
     <div className="card-container">
       <Card className="instagram-card">
         <div className="instagram-header">
-          <img src="/post.jpg" alt="User" className="user-avatar" />
+          <img src="/user.jpg" alt="User" className="user-avatar" />
           <h5 className="username">Username</h5>
           <IoIosMore className="more-icon" />
         </div>
