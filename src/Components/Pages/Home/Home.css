@@ -71,7 +71,6 @@ a {
 /*------------------------ Move "Threads" and "More" options to the bottom ------------------------*/
 .option-actions {
   margin-top: auto;
-  padding-bottom: 50px;
 }
 
 .option-actions span {
@@ -91,7 +90,6 @@ a {
 .maininfo-request-container {
   display: flex;
   justify-content: center;
-  gap: 10%;
   padding: 20px 0;
   position: fixed;
   top: 0;
@@ -144,7 +142,6 @@ a {
 .post-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
 /*------------------------ CardCom component ------------------------*/
@@ -239,7 +236,8 @@ a {
 .request-container {
   width: 25%;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0 0 0 64px;
+  margin: 36px 0 0;
 }
 
 .account-details {
