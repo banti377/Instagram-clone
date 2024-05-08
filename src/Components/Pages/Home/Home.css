@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 15px;
   border-right: 2px solid #4b5563;
-  width: 350px;
+  width: 18%;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +14,6 @@
   overflow-y: auto;
   max-height: 100vh; /* Set max-height to the viewport height */
 }
-
 
 .option-header {
   padding: 20px 0;
@@ -91,11 +90,13 @@ a {
 /*------------------------ Container for Maininfo, Story, and Request ------------------------*/
 .maininfo-request-container {
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  gap: 10%;
   padding: 20px 0;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 18%;
+  width: 82%;
   height: 100vh;
   overflow-y: auto;
 }
@@ -112,7 +113,6 @@ a {
   overflow-x: auto;
   padding: 20px 0;
   gap: 15px;
-  margin: 0 243px;
 }
 
 .story-role-item {
@@ -140,9 +140,6 @@ a {
   border-color: #ed4956;
 }
 /*------------------------ Maininfo component ------------------------*/
-.maininfo-container {
-  flex: 1;
-}
 
 .post-container {
   display: flex;
@@ -247,7 +244,7 @@ a {
 
 /*------------------------ Request component ------------------------*/
 .request-container {
-  width: 25%;
+  width: 20%;
   border-radius: 10px;
   padding: 20px;
 }
@@ -344,43 +341,59 @@ a {
   margin-left: auto;
 }
 
-/* Profile Container */
+/*------------------------ Profile Container ------------------------*/
+
 .profile {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 18%;
+  width: 82%;
+  height: 100vh;
+  overflow-y: auto;
 }
 
-/* Profile Header */
+/*------------------------ Profile Header ------------------------*/
+
 .profile-header {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 20px; /* Add space between profile-header and tab-list */
+  margin: 20px;
 }
 
 .profile-header h1 {
-  font-size: 1.2rem; /* Reduce font size for username */
+  font-size: 1.2rem;
   margin: 0;
-  font-weight: bold; /* Make username bold */
-  font-family: Arial, sans-serif; /* Set font family */
+  font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
-/* Profile Picture */
+/*------------------------ Profile Picture ------------------------*/
+
 .profile-header img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
 
-/* Profile Info */
+/*------------------------ Profile Info ------------------------*/
+
 .profile-info {
-  flex-grow: 1; /* Allows the profile info to take up remaining space */
+  flex-grow: 1;
+  margin-left: 40px;
 }
 
-/* Profile Actions */
+/*------------------------ Profile Actions ------------------------*/
+
 .profile-actions {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -392,52 +405,54 @@ a {
   background-color: #3897f0;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  transition: background-color 0.3s ease;
 }
 
 .profile-actions button:hover {
-  background-color: #2871c7; /* Change background color on hover */
+  background-color: #2871c7;
 }
 
-/* Remove border and adjust padding for settings button */
+/*------------------------ Remove border and adjust padding for settings button ------------------------*/
+
 .profile-actions button.settings-button {
   padding: 8px 12px;
   border-radius: 50%;
 }
 
 .profile-actions button.settings-button:hover {
-  background-color: #2871c7; /* Change background color on hover */
+  background-color: #2871c7;
 }
 
 .profile-header h1 {
-  font-size: 1.2rem; /* Reduce font size for username */
+  font-size: 1.2rem;
   margin: 0;
-  font-weight: bold; /* Make username bold */
+  font-weight: bold;
 }
 
 .profile-header .bio {
-  font-size: 0.9rem; /* Reduce font size for bio */
-  color: #777; /* Change bio text color */
+  font-size: 0.9rem;
+  color: #777;
 }
 
 .follow-stats {
   display: flex;
   gap: 20px;
-  margin-top: 8px; /* Add margin to separate from profile actions */
+  margin: 20px 0;
 }
 
 .follow-stats span {
-  font-size: 0.9rem; /* Reduce font size for follow stats */
-  color: #555; /* Change follow stats text color */
-  font-family: Arial, sans-serif; /* Set font family */
+  font-size: 0.9rem;
+  color: #555;
+  font-family: Arial, sans-serif;
   font-weight: bold;
 }
 
-/* Tab List */
+/*------------------------ Tab List ------------------------*/
+
 .tab-list {
   display: flex;
   gap: 20px;
-  margin-bottom: 20px; /* Add space between tab-list and posts-grid */
+  margin-bottom: 20px;
 }
 
 .tab {
@@ -448,15 +463,16 @@ a {
 }
 
 .tab span {
-  font-size: 0.9rem; /* Set font size for tab text */
-  font-family: Arial, sans-serif; /* Set font family for tab text */
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
 }
 
 .tab .icon {
-  font-size: 1.2rem; /* Adjust icon size */
+  font-size: 1.2rem;
 }
 
-/* Posts Grid */
+/*------------------------ Posts Grid ------------------------*/
+
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -464,12 +480,12 @@ a {
 }
 
 .post {
-  position: relative; /* Add position relative for positioning */
+  position: relative;
 }
 
 .post img {
-  width: 300px; /* Adjust width to match Instagram */
-  height: 300px; /* Adjust height to match Instagram */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  cursor: pointer; /* Add cursor pointer for clickable effect */
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
 }
