@@ -7,7 +7,6 @@ import {
   MonitorPlay,
   Search,
   SquarePlus,
-  SquareUserRound,
 } from "lucide-react";
 import { FaThreads } from "react-icons/fa6";
 import { MdOutlineDensityMedium } from "react-icons/md";

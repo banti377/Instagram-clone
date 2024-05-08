@@ -31,10 +31,13 @@ function Login() {
         password: password.current.value,
       });
       console.log("Login success:", response.data);
+
+      localStorage.setItem("userData", JSON.stringify(response.data)) 
+
       navigate("/home");
     } catch (err) {
       console.error("Login error:", err);
-      alert(err.response.data.message); // Display error message to user
+      alert(err.response.data.message);
     }
   };
 

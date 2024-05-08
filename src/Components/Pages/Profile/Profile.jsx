@@ -1,82 +1,96 @@
-import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Option from "../Home/Option";
 
-
 export default function Profile() {
-  const userId = "123";
+  const [followingCount, setFollowingCount] = useState(0);
+  const [followersCount, setFollowersCount] = useState(0);
+  const [postCount, setPostCount] = useState(0);
 
-  // useEffect(() => {
-  //   axios({
-  //     method: "get",
-  //     url: "http://localhost:8000/followers/allfollowers/${userId}",
-  //   })
-  //     .then((res) => {
-  //       console.log("followers Res=>", res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log("followers Error=>", err);
-  //     });
-  // }, [userId]);
+  useEffect(() => {
+    const userDataString = localStorage.getItem("userData");
+
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
+      console.log("userData:", userData);
+
+      const { data } = userData;
+      console.log("data:", data);
+
+      const { followers, following, postCount } = data;
+      console.log("followers:", followers);
+      console.log("following:", following);
+
+      if (followers !== undefined) {
+        setFollowersCount(followers);
+      }
+      if (following !== undefined) {
+        setFollowingCount(following);
+      }
+      if (postCount !== undefined) {
+        setPostCount(postCount);
+      }
+    } else {
+      console.log("userData is not available in localStorage");
+    }
+  }, []);
 
   return (
-    <div class="profile">
+    <div className="profile">
       <Option />
-      <div class="profile-header">
-    <img src="user.jpg" alt="Profile Picture" />
-    <div class="profile-info">
-      <div class="profile-actions">
-        <h1>Username</h1>
-        <button>Edit Profile</button>
-        <button>View Archive</button>
-        <button class="settings-button">&#9881;</button>
+      <div className="profile-header">
+        <img src="user.jpg" alt="Profile Picture" />
+        <div className="profile-info">
+          <div className="profile-actions">
+            <h1>Username</h1>
+            <button>Edit Profile</button>
+            <button>View Archive</button>
+            <button className="settings-button">&#9881;</button>
+          </div>
+          <div className="follow-stats">
+            <span>Posts: {postCount}</span>
+            <span>Followers: {followersCount}</span>
+            <span>Following: {followingCount}</span>
+          </div>
+          <p className="bio">Bio</p>
+        </div>
       </div>
-      <div class="follow-stats">
-        <span>Posts: 100</span>
-        <span>Followers: 500</span>
-        <span>Following: 200</span>
+      <div className="tab-list">
+        <div className="tab">
+          <span className="icon">&#128247;</span>
+          <span>Posts</span>
+        </div>
+        <div className="tab">
+          <span className="icon">&#128465;</span>
+          <span>Saved</span>
+        </div>
+        <div className="tab">
+          <span className="icon">&#64;</span>
+          <span>Tagged</span>
+        </div>
       </div>
-      <p class="bio">Bio</p>
-    </div>
-  </div>
-  <div class="tab-list">
-    <div class="tab"> 
-      <span class="icon">&#128247;</span> 
-      <span>Posts</span>
-    </div>
-    <div class="tab"> 
-      <span class="icon">&#128465;</span>
-      <span>Saved</span>
-    </div>
-    <div class="tab"> 
-      <span class="icon">&#64;</span>
-      <span>Tagged</span>
-    </div>
-  </div>
-      <div class="posts-grid">
-        <div class="post">
+      <div className="posts-grid">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
-        <div class="post">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
-        <div class="post">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
-        <div class="post">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
-        <div class="post">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
-        <div class="post">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
-        <div class="post">
+        <div className="post">
           <img src="post.jpg" alt="Post Image" />
         </div>
       </div>
     </div>
   );
 }
-

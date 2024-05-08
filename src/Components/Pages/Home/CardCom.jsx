@@ -13,10 +13,8 @@ export default function CardCom() {
     url: " http://localhost:8000/post/getAll",
   })
     .then((res) => {
-      console.log("Product Res=>", res.data);
     })
     .catch((err) => {
-      console.log("Product Error=>", err);
     });
 
   return (

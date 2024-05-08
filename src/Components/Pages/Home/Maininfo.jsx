@@ -1,13 +1,14 @@
 import React from "react";
 import CardCom from "./CardCom";
-import Request from "./Request"; // Import the Request component
+import Request from "./Request";
 import "./Home.css";
 import Story from "./Story";
+import Option from "./Option";
 
 export default function Maininfo() {
   return (
     <div className="maininfo-request-container">
-      {/* New container for Maininfo and Request */}
+      <Option/>
       <div className="maininfo-container">
         <Story />
         <div className="post-container">
@@ -15,7 +16,7 @@ export default function Maininfo() {
           <CardCom />
         </div>
       </div>
-      <Request /> {/* Render the Request component */}
+      <Request />
     </div>
   );
 }
