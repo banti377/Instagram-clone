@@ -7,9 +7,6 @@ export default function Home() {
     <div>
       <div>
         <div>
-          {/* <Option /> */}
-        </div>
-        <div>
           <Maininfo />
         </div>
       </div>
