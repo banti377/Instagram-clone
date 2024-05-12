@@ -1,0 +1,275 @@
+/*------------------------ Container for Maininfo, Story, and Request ------------------------*/
+.card-request-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 335px;
+  width: 1568px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/*------------------------ CardCom component ------------------------*/
+.card-container {
+  max-width: 630px;
+  width: 100%;
+  padding: 20px;
+}
+
+.card-container img {
+  max-height: 600px;
+  margin-bottom: 10px;
+}
+
+.card-container p {
+  margin-bottom: 10px;
+}
+
+/*------------------------ Instagram-like post card ------------------------*/
+.instagram-card {
+  width: min(470px, 100vw);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.instagram-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.username {
+  font-size: 16px;
+  margin: 0;
+}
+
+.more-icon {
+  margin-left: auto;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.instagram-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #262626;
+}
+
+/* Apply dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .instagram-card .icon-button .icon {
+    color: #fafafa; /* Dark mode icon color */
+  }
+}
+
+/* Apply light mode styles */
+@media (prefers-color-scheme: light) {
+  .instagram-card .icon-button .icon {
+    color: #262626; /* Light mode icon color */
+  }
+}
+
+.icon-button:hover .icon {
+  color: #8e8e8e;
+}
+
+.save-post-icon {
+  font-size: 20px;
+  color: #262626;
+  cursor: pointer;
+}
+
+.save-post-icon:hover {
+  color: #8e8e8e;
+}
+
+.likes {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.description,
+.add-comment {
+  margin: 5px 0;
+}
+
+/*------------------------ Request component ------------------------*/
+.request-container {
+  width: 25%;
+  border-radius: 10px;
+  padding: 0 0 0 64px;
+  margin-top: 36px;
+  height: 100%;
+}
+
+.account-details {
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info h5:first-child {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.user-info h5:last-child {
+  margin: 0;
+  font-size: 12px;
+}
+
+.action-links {
+  margin-left: auto;
+}
+
+.action-links a {
+  color: #0095f6;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.1s;
+  font-size: 13px;
+}
+
+.other-accounts .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.other-accounts .section-title h5 {
+  margin: 0;
+  font-weight: 500;
+  color: #737373;
+}
+
+.other-accounts .section-title a {
+  font-size: 13px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.suggestions {
+  padding-top: 20px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.suggestion {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.suggestion img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.suggestion h5 {
+  margin: 5px 0;
+}
+
+.suggestion p {
+  margin: 5px 0;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.suggestion .action-links {
+  margin-left: auto;
+}
+
+/* Apply dark mode styles for action links */
+@media (prefers-color-scheme: dark) {
+  .action-links a,
+  .other-accounts .section-title a {
+    color: #0095f6; /* Dark mode text color */
+  }
+
+  /* Hover effect for dark mode */
+  .action-links a:hover,
+  .other-accounts .section-title a:hover {
+    color: #e0f1ff; /* White color on hover */
+  }
+}
+
+/* Apply light mode styles for action links */
+@media (prefers-color-scheme: light) {
+  .action-links a,
+  .other-accounts .section-title a {
+    color: #0095f6; /* Light mode text color */
+  }
+
+  /* Hover effect for light mode */
+  .action-links a:hover,
+  .other-accounts .section-title a:hover {
+    color: #00376b; /* Dark blue color on hover */
+  }
+}
+
+/* Apply dark mode styles for action links */
+@media (prefers-color-scheme: dark) {
+  .other-accounts .section-title a {
+    color: #e0f1ff; /* Dark mode text color */
+  }
+
+  /* Hover effect for dark mode */
+  .other-accounts .section-title a:hover {
+    color: grey; /* White color on hover */
+  }
+}
+
+/* Apply light mode styles for action links */
+@media (prefers-color-scheme: light) {
+  .other-accounts .section-title a {
+    color: black; /* Light mode text color */
+  }
+
+  /* Hover effect for light mode */
+  .other-accounts .section-title a:hover {
+    color: grey; /* Dark blue color on hover */
+  }
+}

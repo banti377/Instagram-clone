@@ -1,0 +1,160 @@
+/*------------------------ Profile Container ------------------------*/
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 335px;
+  width: 1568px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+/*------------------------ Profile Header ------------------------*/
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.profile-header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+/*------------------------ Profile Picture ------------------------*/
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/*------------------------ Profile Info ------------------------*/
+
+.profile-info {
+  flex-grow: 1;
+  margin-left: 40px;
+}
+
+/*------------------------ Profile Actions ------------------------*/
+
+.profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-actions button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #363636;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profile-actions button:hover {
+  background-color: #252525;
+}
+
+/*------------------------ Remove border and adjust padding for settings button ------------------------*/
+
+.profile-actions button.settings-button {
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+.profile-actions button.settings-button:hover {
+  background-color: #2871c7;
+}
+
+.profile-header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.profile-header .bio {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.follow-stats {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.follow-stats span {
+  font-size: 0.9rem;
+  color: #555;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/*------------------------ Tab List ------------------------*/
+
+.tab-list {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.tab .icon {
+  font-size: 1.2rem;
+}
+
+/*------------------------ Posts Grid ------------------------*/
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.post {
+  position: relative;
+}
+
+.post img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Apply dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .follow-stats span,
+  .tab .icon,
+  .profile-header .bio {
+    color: #fafafa; /* Dark mode color */
+  }
+}
+
+/* Apply light mode styles */
+@media (prefers-color-scheme: light) {
+  .follow-stats span,
+  .tab .icon,
+  .profile-header .bio {
+    color: #262626; /* Light mode color */
+  }
+}

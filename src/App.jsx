@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Router from "./Router/Router";
-import { ToastContainer } from "react-toastify";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  const [location, setLocation] = useState("");
+
   return (
-    <>
-      <Router />
-      <ToastContainer />
-    </>
+    <BrowserRouter>
+      <Router location={location} setLocation={setLocation} />
+    </BrowserRouter>
   );
 }
 

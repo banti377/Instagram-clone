@@ -32,7 +32,7 @@ function Login() {
       });
       console.log("Login success:", response.data);
 
-      localStorage.setItem("userData", JSON.stringify(response.data)) 
+      localStorage.setItem("userData", JSON.stringify(response.data));
 
       navigate("/home");
     } catch (err) {
@@ -47,22 +47,22 @@ function Login() {
         <div className="loginLeft">
           <div className="frontImgWrapper">
             <img
-              src={"loginpage1.png"}
+              src={"Images/loginpage1.png"}
               className={show1 === 1 ? "frontImg show" : "frontImg hide"}
               alt=""
             />
             <img
-              src={"loginpage2.png"}
+              src={"Images/loginpage2.png"}
               className={show1 === 2 ? "frontImg show" : "frontImg hide"}
               alt=""
             />
             <img
-              src={"loginpage3.png"}
+              src={"Images/loginpage3.png"}
               className={show1 === 3 ? "frontImg show" : "frontImg hide"}
               alt=""
             />
             <img
-              src={"loginpage4.png"}
+              src={"Images/loginpage4.png"}
               className={show1 === 4 ? "frontImg show" : "frontImg hide"}
               alt=""
             />

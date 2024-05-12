@@ -1,16 +1,36 @@
+/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  /* Use your preferred font stack */
+/* Light mode variables */
+:root {
+  --background-color-light: #fafafa;
+  --text-color-light: black;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: white;
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-dark: black;
+    --text-color-dark: #fafafa;
+  }
+}
+
+/* Body styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+/* Apply dark mode styles when system preference is dark */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
 }
