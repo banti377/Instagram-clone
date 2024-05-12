@@ -1,13 +1,12 @@
 import React from "react";
-import Option from "./Option";
 import Maininfo from "./Maininfo";
 
-export default function Home() {
+export default function Home({ darkMode, toggleDarkMode }) {
   return (
-    <div>
+    <div className={darkMode ? 'dark-mode' : ''}>
       <div>
         <div>
-          <Maininfo />
+          <Maininfo darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
       </div>
     </div>

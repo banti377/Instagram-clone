@@ -5,18 +5,20 @@ import "./Home.css";
 import Story from "./Story";
 import Option from "./Option";
 
-export default function Maininfo() {
+export default function Maininfo({ darkMode, toggleDarkMode }) {
   return (
-    <div className="maininfo-request-container">
-      <Option/>
-      <div className="maininfo-container">
-        <Story />
-        <div className="post-container">
-          <CardCom />
-          <CardCom />
+    <div className={darkMode ? 'dark-mode' : ''}>
+      <div className="maininfo-request-container">
+        <Option darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <div className="maininfo-container">
+          <Story darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <div className="post-container">
+            <CardCom darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <CardCom />
+          </div>
         </div>
+        <Request darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>
-      <Request />
     </div>
   );
 }

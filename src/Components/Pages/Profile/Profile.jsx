@@ -5,6 +5,11 @@ export default function Profile() {
   const [followingCount, setFollowingCount] = useState(0);
   const [followersCount, setFollowersCount] = useState(0);
   const [postCount, setPostCount] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
 
   useEffect(() => {
     const userDataString = localStorage.getItem("userData");
@@ -31,8 +36,8 @@ export default function Profile() {
   }, []);
 
   return (
-    <div>
-      <Option />
+    <div className={`profile ${darkMode ? "dark-mode" : ""} `}>
+      <Option darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div className="profile">
         <div className="profile-header">
           <img src="user.jpg" alt="Profile Picture" />
