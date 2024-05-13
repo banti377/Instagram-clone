@@ -9,8 +9,8 @@
   padding: 20px 0;
   position: fixed;
   top: 0;
-  left: 335px;
-  width: 1568px;
+  left: 18%;
+  width: 82%;
   overflow-y: auto;
   max-height: 100vh;
 }
@@ -143,18 +143,22 @@
 
 /* Apply dark mode styles */
 @media (prefers-color-scheme: dark) {
+
   .follow-stats span,
   .tab .icon,
   .profile-header .bio {
-    color: #fafafa; /* Dark mode color */
+    color: #fafafa;
+    /* Dark mode color */
   }
 }
 
 /* Apply light mode styles */
 @media (prefers-color-scheme: light) {
+
   .follow-stats span,
   .tab .icon,
   .profile-header .bio {
-    color: #262626; /* Light mode color */
+    color: #262626;
+    /* Light mode color */
   }
 }

@@ -4,8 +4,8 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 335px;
-  width: 1568px;
+  left: 18%;
+  width: 82%;
   overflow-y: auto;
   height: 100vh;
 }
@@ -82,14 +82,16 @@
 /* Apply dark mode styles */
 @media (prefers-color-scheme: dark) {
   .instagram-card .icon-button .icon {
-    color: #fafafa; /* Dark mode icon color */
+    color: #fafafa;
+    /* Dark mode icon color */
   }
 }
 
 /* Apply light mode styles */
 @media (prefers-color-scheme: light) {
   .instagram-card .icon-button .icon {
-    color: #262626; /* Light mode icon color */
+    color: #262626;
+    /* Light mode icon color */
   }
 }
 
@@ -224,52 +226,62 @@
 
 /* Apply dark mode styles for action links */
 @media (prefers-color-scheme: dark) {
+
   .action-links a,
   .other-accounts .section-title a {
-    color: #0095f6; /* Dark mode text color */
+    color: #0095f6;
+    /* Dark mode text color */
   }
 
   /* Hover effect for dark mode */
   .action-links a:hover,
   .other-accounts .section-title a:hover {
-    color: #e0f1ff; /* White color on hover */
+    color: #e0f1ff;
+    /* White color on hover */
   }
 }
 
 /* Apply light mode styles for action links */
 @media (prefers-color-scheme: light) {
+
   .action-links a,
   .other-accounts .section-title a {
-    color: #0095f6; /* Light mode text color */
+    color: #0095f6;
+    /* Light mode text color */
   }
 
   /* Hover effect for light mode */
   .action-links a:hover,
   .other-accounts .section-title a:hover {
-    color: #00376b; /* Dark blue color on hover */
+    color: #00376b;
+    /* Dark blue color on hover */
   }
 }
 
 /* Apply dark mode styles for action links */
 @media (prefers-color-scheme: dark) {
   .other-accounts .section-title a {
-    color: #e0f1ff; /* Dark mode text color */
+    color: #e0f1ff;
+    /* Dark mode text color */
   }
 
   /* Hover effect for dark mode */
   .other-accounts .section-title a:hover {
-    color: grey; /* White color on hover */
+    color: grey;
+    /* White color on hover */
   }
 }
 
 /* Apply light mode styles for action links */
 @media (prefers-color-scheme: light) {
   .other-accounts .section-title a {
-    color: black; /* Light mode text color */
+    color: black;
+    /* Light mode text color */
   }
 
   /* Hover effect for light mode */
   .other-accounts .section-title a:hover {
-    color: grey; /* Dark blue color on hover */
+    color: grey;
+    /* Dark blue color on hover */
   }
 }
