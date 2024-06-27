@@ -1,5 +1,5 @@
 import React from "react";
-import "./Story.css";
+import "./style.css";
 
 export default function Story() {
   return (

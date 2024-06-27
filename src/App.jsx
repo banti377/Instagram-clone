@@ -1,13 +1,11 @@
 import { useState } from "react";
-import Router from "./Router/Router";
 import { BrowserRouter } from "react-router-dom";
+import Router from "./router/router";
 
 function App() {
-  const [location, setLocation] = useState("");
-
   return (
     <BrowserRouter>
-      <Router location={location} setLocation={setLocation} />
+      <Router />
     </BrowserRouter>
   );
 }
