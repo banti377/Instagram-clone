@@ -231,11 +231,11 @@ export default function CardCom() {
         {/* Sidebar content */}
         <div className="p-4 bg-white dark:bg-black rounded-md">
           <div className="flex items-center mb-4">
-            <img
-              src="Images/user.jpg"
-              alt="User"
-              className="w-12 h-12 rounded-full mr-3"
-            />
+              <img
+                src="Images/user.jpg"
+                alt="User"
+                className="w-11 h-11 rounded-full mr-3"
+              />
             <div>
               <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 Noteworthy technology
@@ -257,10 +257,7 @@ export default function CardCom() {
             <h6 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
               Suggestions For You
             </h6>
-            <a
-              href="#"
-              className="text-xs text-gray-900 dark:text-gray-400 hover:text-black dark:hover:text-gray-200 transition-colors duration-100"
-            >
+            <a href="#" className="text-xs text-white dark:hover:text-gray-500">
               See All
             </a>
           </div>
@@ -270,10 +267,10 @@ export default function CardCom() {
                 <img
                   src="Images/user.jpg"
                   alt="User"
-                  className="w-8 h-8 rounded-full mr-3"
+                  className="w-11 h-11 rounded-full mr-3"
                 />
                 <div>
-                  <h5 className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                  <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                     User 1
                   </h5>
                   <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -295,10 +292,10 @@ export default function CardCom() {
                 <img
                   src="Images/user.jpg"
                   alt="User"
-                  className="w-8 h-8 rounded-full mr-3"
+                  className="w-11 h-11 rounded-full mr-3"
                 />
                 <div>
-                  <h5 className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                  <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                     User 2
                   </h5>
                   <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -320,10 +317,10 @@ export default function CardCom() {
                 <img
                   src="Images/user.jpg"
                   alt="User"
-                  className="w-8 h-8 rounded-full mr-3"
+                  className="w-11 h-11 rounded-full mr-3"
                 />
                 <div>
-                  <h5 className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                  <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                     User 3
                   </h5>
                   <p className="text-xs text-gray-500 dark:text-gray-400">
