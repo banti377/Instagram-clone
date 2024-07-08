@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Compass,
   Heart,
@@ -11,13 +11,25 @@ import {
 import { MdOutlineDensityMedium } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { FaThreads } from "react-icons/fa6";
+import CreateModal from "../../pages/create";
 
 export default function SideMenu() {
   const [showMenu, setShowMenu] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const fileInputRef = useRef(null);
+
   const navigate = useNavigate();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  const openCreateModal = () => {
+    setIsCreateModalOpen(true);
+  };
+
+  const closeCreateModal = () => {
+    setIsCreateModalOpen(false);
   };
 
   const logout = () => {
@@ -30,6 +42,16 @@ export default function SideMenu() {
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const handleFileSelect = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFilesChange = (event) => {
+    const files = event.target.files;
+    console.log('Selected files:', files);
+    // Add your file handling logic here
   };
 
   return (
@@ -111,16 +133,15 @@ export default function SideMenu() {
         </Link>
 
         {/* ----- Create ----- */}
-        <Link
-          to="/create"
+        <span
           className="flex items-center gap-4 cursor-pointer transition-all ease-in-out p-1.5 my-1 hover:bg-gray-300 dark:hover:bg-gray-900 rounded-lg"
-          onClick={handleClick}
+          onClick={openCreateModal}
         >
           <SquarePlus className="w-7 h-7" />
           <h5 className="text-base font-normal">
             {capitalizeFirstLetter("create")}
           </h5>
-        </Link>
+        </span>
 
         {/* ----- Profile ----- */}
         <Link
@@ -170,6 +191,10 @@ export default function SideMenu() {
           </div>
         )}
       </div>
+      
+      {isCreateModalOpen && (
+        <CreateModal onClose={closeCreateModal} handleFileSelect={handleFileSelect} handleFilesChange={handleFilesChange} />
+      )}
     </div>
   );
 }

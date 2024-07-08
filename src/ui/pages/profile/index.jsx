@@ -80,7 +80,7 @@ export default function Profile() {
   };
 
   return (
-    <div className="profile bg-gray-100 dark:bg-black min-h-screen">
+    <div className="profile bg-gray-100 dark:bg-black min-h-screen ml-80">
       <div className="profile-header bg-white dark:bg-black border-b border-gray-300 dark:border-gray-700">
         <div className="container mx-auto max-w-4xl px-4 py-6 flex flex-col md:flex-row items-center">
           <div className="flex items-center space-x-4 md:space-x-8">

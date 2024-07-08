@@ -23,7 +23,7 @@ const dummyStories = [
 ];
 
 const Story = ({ username, image, showPrev, showNext }) => (
-  <div className="flex flex-col items-center ml-4 relative">
+  <div className="flex flex-col items-center ml-4">
     {showPrev && (
       <button
         onClick={showPrev}
@@ -46,7 +46,7 @@ const Story = ({ username, image, showPrev, showNext }) => (
         </svg>
       </button>
     )}
-    <div className="relative">
+    <div className="">
       <img src={image} alt={username} className="w-16 h-16 rounded-full mb-1" />
     </div>
     <h5 className="text-xs font-semibold text-gray-900 dark:text-gray-100">
@@ -92,10 +92,10 @@ export default function CardCom() {
   };
 
   return (
-    <div className="flex justify-center mt-10">
-      <div className="relative max-w-[614px] w-full">
+    <div className="flex justify-center mt-10 ml-80">
+      <div className=" max-w-[614px] w-full">
         {/* Stories Section */}
-        <div className="mb-5 bg-white dark:bg-black rounded-lg shadow-md overflow-hidden relative">
+        <div className="mb-5 bg-white dark:bg-black rounded-lg shadow-md overflow-hidden ">
           <div
             className="flex space-x-4 overflow-x-auto"
             style={{ overflowX: "auto", scrollbarWidth: "none" }}
@@ -137,7 +137,7 @@ export default function CardCom() {
               </h5>
               <IoIosMore className="ml-auto text-gray-900 dark:text-gray-100" />
             </div>
-            <div className="relative w-full h-full">
+            <div className=" w-full h-full">
               <img
                 src="Images/post.jpg"
                 alt="Post"
@@ -186,7 +186,7 @@ export default function CardCom() {
               </h5>
               <IoIosMore className="ml-auto text-gray-900 dark:text-gray-100" />
             </div>
-            <div className="relative w-full h-full">
+            <div className=" w-full h-full">
               <img
                 src="Images/post.jpg"
                 alt="Post"
@@ -231,11 +231,11 @@ export default function CardCom() {
         {/* Sidebar content */}
         <div className="p-4 bg-white dark:bg-black rounded-md">
           <div className="flex items-center mb-4">
-              <img
-                src="Images/user.jpg"
-                alt="User"
-                className="w-11 h-11 rounded-full mr-3"
-              />
+            <img
+              src="Images/user.jpg"
+              alt="User"
+              className="w-11 h-11 rounded-full mr-3"
+            />
             <div>
               <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 Noteworthy technology
