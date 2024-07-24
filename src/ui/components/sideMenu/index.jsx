@@ -45,6 +45,20 @@ export default function SideMenu() {
   };
 
   const logout = () => {
+    // Get the current user data from localStorage
+    const userDataString = localStorage.getItem("userData");
+    if (userDataString) {
+      const userData = JSON.parse(userDataString);
+      if (userData && userData.data) {
+        // Save the profileImage URL in localStorage before logout
+        const { profileImage } = userData.data;
+        localStorage.setItem("profileImage", profileImage);
+      }
+    }
+
+    // Clear user data and other logout logic
+    localStorage.removeItem("userData");
+    // Redirect to login 
     navigate("/");
   };
 
@@ -75,7 +89,7 @@ export default function SideMenu() {
 
   return (
     <div
-      className={`bg-white dark:bg-black p-2.5 px-3.5 pb-5 flex flex-col border-r-2 border-gray-600 fixed top-0 left-0 bottom-0 max-h-screen transition-transform duration-500 ease-in-out ${isCollapsed ? "w-20" : "w-80"
+      className={`bg-white dark:bg-black p-2.5 px-3.5 pb-5 flex flex-col border-r-2 border-gray-600 fixed top-0 left-0 bottom-0 max-h-screen transition-transform duration-500 ease-in-out ${isCollapsed ? "w-20" : "w-64"
         }`}
     >
       {/* Instagram Name */}
@@ -198,7 +212,7 @@ export default function SideMenu() {
           onClick={() => handleClick("/profile")}
         >
           <img
-            src="Images/user.jpg"
+            src={""}
             alt="Profile"
             className="w-7 h-7 rounded-full object-cover border-2 border-black"
           />

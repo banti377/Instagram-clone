@@ -31,7 +31,7 @@ export default function Login() {
       });
       console.log("Login success:", response.data);
 
-      localStorage.setItem("userData", JSON.stringify(response.data));
+      localStorage.setItem("userData", JSON.stringify(response.data.data));
 
       navigate("/home");
     } catch (err) {
@@ -47,30 +47,26 @@ export default function Login() {
           <div className="flex">
             <img
               src="Images/loginpage1.png"
-              className={`${
-                show1 === 1 ? "opacity-100 z-2" : "opacity-0"
-              } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
+              className={`${show1 === 1 ? "opacity-100 z-2" : "opacity-0"
+                } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
               alt=""
             />
             <img
               src="Images/loginpage2.png"
-              className={`${
-                show1 === 2 ? "opacity-100 z-2" : "opacity-0"
-              } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
+              className={`${show1 === 2 ? "opacity-100 z-2" : "opacity-0"
+                } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
               alt=""
             />
             <img
               src="Images/loginpage3.png"
-              className={`${
-                show1 === 3 ? "opacity-100 z-2" : "opacity-0"
-              } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
+              className={`${show1 === 3 ? "opacity-100 z-2" : "opacity-0"
+                } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
               alt=""
             />
             <img
               src="Images/loginpage4.png"
-              className={`${
-                show1 === 4 ? "opacity-100 z-2" : "opacity-0"
-              } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
+              className={`${show1 === 4 ? "opacity-100 z-2" : "opacity-0"
+                } absolute top-7 right-[3.7rem] transition-opacity duration-1500 ease-in-out`}
               alt=""
             />
           </div>

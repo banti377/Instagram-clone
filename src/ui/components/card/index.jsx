@@ -170,7 +170,7 @@ export default function CardCom() {
         <div className="p-4 bg-white dark:bg-black rounded-md">
           <div className="flex items-center mb-4">
             <img
-              src="Images/user.jpg"
+              src={""}
               alt="User"
               className="w-11 h-11 rounded-full mr-3"
             />
